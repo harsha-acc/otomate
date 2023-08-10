@@ -23,9 +23,7 @@ function OpenAiComponent({data, mailBody}) {
             
                             const makeApiCall = async () => {
                             try {
-                                const firstTemplate = `You are a classifier, you classify the following body of the mail: ${data.text.text} into\
-                               two classes, which are 'CUSTOMER COMPLAINT' and 'ORDER CONFIRMATION', IMPORTANT: strictly output '1' for 'CUSTOMER COMPLAINT'\
-                               and '2' for 'ORDER CONFIRMATION'`;
+                                const firstTemplate = `Classify this  "${data.text.text}" into either 1. Customer Complaint or 2. Late Delivery or 3. On time delivery`;
                                console.log(firstTemplate)
             
                                 const firstPrompt = new PromptTemplate({inputVariables: ["mailBody"], template: firstTemplate})

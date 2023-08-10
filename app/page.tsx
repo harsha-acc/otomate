@@ -106,7 +106,7 @@ export default function Home() {
          },
         position: { x: 500, y: nodes.length*500 },
         type: type,
-        draggable: false
+        //draggable: false
       }
       return [...nds,node]
     })
@@ -153,7 +153,7 @@ export default function Home() {
           <div className='hover:bg-slate-100' >
           <button style={{background:' linear-gradient(180deg, #E1E0FB 11.46%, #E1ECF7 61.98%)', }} className='w-full py-2 px-4 ' onClick={()=>{addNode('llm')}}>LLM</button>
         </div>
-        <button onClick={()=>console.log(nodes)}>Check array</button>
+        
 
         </div>
         

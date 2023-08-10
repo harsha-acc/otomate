@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { getwebhook } from "./slack"
 import { useSearchParams } from "next/navigation";
 import { redditCronJob } from "../reddit/reddit.cron";
@@ -8,6 +8,7 @@ export function SlackComponent(props){
     const code=localStorage.getItem("slackCode")
     let [webhook,setWebhook]=useState("")
     console.log(code)
+   
     useEffect(()=>{
         async function fetchwebhook(){
             if(code)

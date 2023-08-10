@@ -24,7 +24,8 @@ export function gmailCronJob(webhook: string, user: string, password: string, te
                     }
                     //textobj.sourcenode.data.text = res;
                     if (prevdata !== JSON.stringify(res)) {
-                        sendSlackMsg(new URL(webhook), `New Email from ${res.from.text} with the subject ${localStorage.getItem("type")?res.subject:localStorage.getItem("type")}`);
+                        sendSlackMsg(new URL(webhook), `New Email from ${res.from.text} with the subject ${localStorage.getItem("type")==null?res.subject:localStorage.getItem("type")}`);
+                        if(localStorage.getItem("type"))
                         prevdata = JSON.stringify(res);
                     }
                    

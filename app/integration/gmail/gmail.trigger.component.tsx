@@ -10,7 +10,7 @@ export function GmailTrigger(props) {
         type="email"
       /></label>
      
-      <label htmlFor="password">Password: <input
+      <label htmlFor="password">App Key: <input
       className="max-w-[260px] bg-white border border-gray-300 text-gray-700 py-2 px-4 focus:outline-none focus:border-blue-500"
         id="password"
         name="password"
